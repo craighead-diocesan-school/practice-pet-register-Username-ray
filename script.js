@@ -18,6 +18,8 @@ function addingPets () {
     let species = prompt("What spieces does it belong to?")
     let age = prompt('How old is your pet?')
 
+    // check that the input is valid
+    if (name.match(/[a-zA-Z0-9]+/) && age.match(/^(0?[1-9]|[1-9][0-9])$/) && species.match(/^[a-zA-Z]+$/)){
     // create a pet object with the details.
     let pet = {
         name: name,
@@ -27,6 +29,9 @@ function addingPets () {
     
     // add pet object to pets array
     petsArray.push(pet)
+} else {
+  alert('The pet details are not valid.')
+}
 }
 
 function showingPets (){
