@@ -38,7 +38,7 @@ function showingPets (){
 function removingPets() { 
     // output the names of each pet
     let index = 0
-    for(let pet of deletingPet) {
+    for(let pet of petsArray) {
       alert(index + ': ' + pet.name)
       index = index + 1
     }
